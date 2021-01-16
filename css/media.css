@@ -1,0 +1,169 @@
+/**Home page******/
+
+
+
+
+
+/* Small tablet to big tablet: from 768px to 1023px */
+@media only screen and (max-width: 1023px) {}
+
+
+/* Big tablet to 1200px (widths smaller taht the 1140px row) */
+@media only screen and (max-width: 1200px) {}
+
+/* Small phones to small tablets: from 481px to 767px */
+@media only screen and (max-width: 770px) {
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: flex;
+        
+    }
+    .navigation {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        padding: 40px;
+        z-index: 5;
+        background: #7f7f7fc2;
+    }
+    .desktop-off{
+        justify-content: space-between;
+        overflow: hidden;
+    }
+    .menu {
+        width: 20%;
+        background: rgb(185, 185, 185);
+        padding: 43px;
+        margin: 4%;
+    }
+    .menu img {
+        width: 100%;
+        object-fit: cover;
+        cursor: pointer;
+    }
+    .landing {
+        padding: 0px; 
+        padding-top: 175px;
+        flex-direction: column;
+        justify-content: end;
+       
+    }
+    .landing:before {
+        width: 37%;
+    }    
+    .content {
+        width: 96%;
+    height: 68%;
+    padding: 0px;
+    padding-left: 20px;
+    padding-right: 30px;
+    margin-left: 0px;
+    }
+    p.tagline {
+        padding: 0;
+        color: #f1ccac;
+        font-size: 17px;
+    }
+    .content h1 {
+        padding-bottom: 20px;
+        padding-top: 0px;
+        line-height: 46px;
+        font-size: 32px;
+    }
+    .content p {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 30px;
+        padding: 0px 0 15px;
+    }
+    .btn a {
+       
+        width: 20%;
+        padding: 18px 16px;
+    }
+    .btn a:hover{
+        width: 20%;
+
+    }
+    .sideimg {
+        width: 100%;
+        height: 76%;
+        position: relative;
+        background: #ff000000;
+        left: 0%;
+        top: 0%;
+        pointer-events: none;
+    }
+    .sideimg img {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+        transform: translate(10px, -213px);
+    }
+    
+    
+    
+}
+
+
+/* Small phones: from 0 to 480px */
+@media only screen and (max-width: 480px) {
+    .menu{
+        padding: 2%;
+    }
+    
+    .landing {
+        padding: 0px;
+        padding-top: 94px;
+        overflow-x: hidden;
+        height: 141vh;
+        justify-content: end;
+    }
+    .content {
+        width: 83%;
+        height: 65%;
+        padding: 0px;
+        padding-left: 0px;
+        margin-left: 0px;
+    }
+    p.tagline {
+        padding: 0;
+        color: #f1ccac;
+        font-size: 17px;
+    }
+    .content h1 {
+        padding-bottom: 20px;
+        padding-top: 0px;
+        line-height: 46px;
+        font-size: 32px;
+    }
+    .content p {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 30px;
+        padding: 0px 0 15px;
+    }
+    .btn a {
+       
+        width: 43%;
+        padding: 18px 16px;
+    }
+    .sideimg {
+        width: 100%;
+        height: 41%;
+        position: relative;
+        background: #f6f6f6;
+        left: 0%;
+        top: 0%;
+        pointer-events: none;
+    }
+    .sideimg img {
+        width: 160%;
+        object-fit: cover;
+        height: 100%;
+        transform: translate(-231px, -80px);
+    }
+}
