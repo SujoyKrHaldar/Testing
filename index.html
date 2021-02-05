@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
-    
     <link rel="shortcut icon" href="fabicon.png" type="image/png">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
     <title>Addawn | Reach the Pinnacle</title>
@@ -19,12 +18,13 @@
 
 
 
-<div class="wrapper">
+
 
 
 
     <div class=" bodyback rellax" data-rellax-speed='-6'>
     </div>
+    
 
     <header class=" desktop">
         <navbar class="desktop-on" >
@@ -32,11 +32,11 @@
                 <img src="image/LOGO.png">
             </div>
             <ul class="navitem">
-                <ul class="navitem sec">
+                <ul class="navitem ">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About Us</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#Service">Services</a></li>
+                    <li><a href="#Contact">Contact Us</a></li>
                 </ul>
                 
                 <li class="menu"><img src="image/menu.png"></li>
@@ -57,16 +57,15 @@
                 
                 
             </div>
-            <div class="sideimg">
-                <img src="image/cover photo.png">
-            </div>
         </div>
-        
+        <div class="sideimg">    
+            <img class="parallex rellax" data-rellax-speed='-4' src="image/Frontimg.png">
+        </div>
         
     </div>
     
     <div class="ourpolicy">
-        <div class="sideimg sec">
+        <div class="sec">
             <img src="image/unnamed.png">
         </div>
        
@@ -87,7 +86,7 @@
 
     </div>
 
-    <div class="works">
+    <div id="Service" class="works">
         <div class="ourworks">
             <h2>Our Services</h2>
             <div class="servicebox">
@@ -100,7 +99,7 @@
                 <h1>Marketing</h1>
                 <div class="infomsg">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, doloremque?</p>
-                    <a href="#" class="source btn">Read more</a>
+                    <a href="Marketing.html" class="source btn">Read more</a>
 
                 </div>
                 
@@ -117,7 +116,7 @@
                 <h1>Website Development</h1>
                 <div class="infomsg">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, doloremque?</p>
-                    <a href="#" class="source btn">Read more</a>
+                    <a href="web.html" class="source btn">Read more</a>
 
                 </div>
 
@@ -135,7 +134,7 @@
                 <h1>Designing</h1>
                 <div class="infomsg">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, doloremque?</p>
-                    <a href="#" class="source btn">Read more</a>
+                    <a href="design.html" class="source btn">Read more</a>
 
                 </div>
 
@@ -148,7 +147,7 @@
             
     </div>
 
-        <div id="contact" class="contact-us">
+        <div id="Contact" class="contact-us">
             <div class="container">
                 <h1 class="contact">Contact us</h1>
                 <div id="error"></div>
@@ -179,7 +178,7 @@
         </div>
         
     </div>
-</div>    
+    
 
 <script src="js/rellax.min.js"></script>
 <script>
@@ -281,37 +280,20 @@
             
             
         }
+        
 
+     /*   parallex = document.querySelector(".parallex");
+        document.addEventListener("mousemove", (e)=>{
+                parallex.forEach(()=>{
+                    const speed = parallex.getAttribute('data-speed')
+                    const x = (window.innerWidth - e.pageX*speed/100)
+                    const y = (window.innerHeight - e.pageY*speed/100)
+                    parallex.style.transform = `translate(${x}px translateY(${y}px)`
+            })
+        })*/
+        
+        
 
-        /*var currentX = '';
-var currentY = '';
-var movementConstant = .025; 
-
-$(document).mousemove(function(e) {
-  if (currentX == '') currentX = e.pageX;
-  var xdiff = e.pageX - currentX;
-  currentX = e.pageX;
-  if (currentY == '') currentY = e.pageY;
-  var ydiff = e.pageY - currentY;
-  currentY = e.pageY;
-
-  $('.bodyback').each(function(i, el) {
-    var movement = (i + 1) * (xdiff * movementConstant);
-    var movementy = (i + 1) * (ydiff * movementConstant);
-    var newX = $(el).position().left + movement;
-    var newY = $(el).position().top + movementy;
-    var cssObj = {
-      'left': newX + 'px',
-      'top': newY + 'px'
-    };
-
-    // $(el).css('left', newX + 'px');
-    // $(el).css('top', newY + 'px');
-    $(el).css({
-      "transform": "translate(" + newX + "px," + newY + "px)"
-    });
-  });
-});*/
 </script>
 </body>
 </html>

@@ -4,11 +4,15 @@
 
 @font-face{
     font-family: Azonix;
-    src: url(Fonts/Azonix.otf);
+    src: url(../Fonts/Azonix.otf);
   }
   @font-face{
     font-family: Bungee Inline;
-    src: url(Fonts/BungeeInline-Regular.ttf);
+    src: url(../Fonts/BungeeInline-Regular.ttf);
+  }
+  @font-face{
+    font-family: Caviar Dreams;
+    src: url(../Fonts/CaviarDreams.ttf);
   }
 
 * {
@@ -22,9 +26,12 @@
       overflow-y: overlay;
       overflow-x: hidden;
       font-family: Caviar Dreams;
+      display: flex;
+      flex-direction: column;
   }
   html{
     scroll-behavior: smooth;
+    font-size: 100%;
   }
   /******************************************************Scroll*********************************************/
   ::-webkit-scrollbar {
@@ -78,11 +85,6 @@
 
 
 /*****************************************************Navigation bar*************************************/
-.wrapper{
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
 
 
 .bodyback{
@@ -93,6 +95,9 @@
   width: 100%;
 }
 
+
+/**********************************************************************************/
+
 header {
   position: fixed;
   width: 100%;
@@ -101,7 +106,7 @@ header {
   transition: all 0.5s ease-in;
 }
 header.sticky{
-  background-color: rgb(255 255 255 / 60%);
+  background-color: white;
   transition: all 0.5s ease-in;
 }
 .mobile{
@@ -116,8 +121,10 @@ navbar {
   align-items: center;
   height: 100%;
   margin: auto;
-  width: 1279px;
+  /*width: 1279px;*/
+  width: 100%;
   text-align: center;
+  padding: 0px 65px;
 }
 
 .navitem{
@@ -138,7 +145,10 @@ ul li a {
   font-weight: 700;
   transition:all 0.5s ease;
 }
-
+.active{
+  position: relative;
+  border: 2px solid rgba(27, 27, 27, 0.747);
+}
 ul li a:hover{
   background:rgb(0, 0, 0) ;
   color:rgb(255, 255, 255) ;
@@ -168,9 +178,10 @@ ul li img {
 .land{
   position: relative;
   width: 100%;
+  height: auto;
   background: #ffffff9c;
 }
-.land:before {
+/*.land:before {
   content: '';
   position: absolute;
   height: 40%;
@@ -178,39 +189,32 @@ ul li img {
   width: 100%;
   left: 0;
   bottom: -74px;
-}
+}*/
 .landing {
-  width: 1538px;
+  /*width: 1538px;*/
+  width: 100%;
   margin: auto;
   height:763px; 
   padding: 40px;
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   overflow: hidden;
   align-items: center;
 }
-.landing:before {
-  content: '';
-  position: absolute;
-  width: 15%;
-  height: 166px;
-  background: #178573;
-  bottom: 16%;
-  right: 0;
-}
-.landing:after {
+
+/*.landing:after {
   content: '';
   position: absolute;
   width: 1px;
   height: 53px;
   background: #ff3a3a;
   bottom: 7%;
-}
+}*/
 .content {
   width: 50%;
   width: 732px;;
-  height: 67%;
+  height: auto;
   z-index: 2;
   padding: 50px;
 }
@@ -219,15 +223,15 @@ ul li img {
   line-height: 52px;
   width: 123%;
   font-size: 38px;
+  font-size: 2.4rem;
 }
 .content p {
-  font-size: 20px;
-  
+  font-size: 1.7rem;
   color: dimgrey;
-  text-align: justify;
+  text-align: left;
   font-family: monospace;
-  line-height: 30px;
-  padding: 0px 0 20px;
+  line-height: 35px;
+  padding: 0px 11px 20px 0;
 }
 .content p span{
   color: rgb(31, 31, 31);
@@ -236,7 +240,7 @@ p.tagline {
   padding: 0;
   color: #f1ccac;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 2rem;
   font-family: Caviar Dreams;
 }
 .btn{
@@ -249,7 +253,7 @@ p.tagline {
   width: 21%;
   padding: 18px 16px;
   position: relative;
-  font-size: 17px;
+  font-size: 1.2rem;
   font-family: monospace;
   text-align: center;
   transition: 0.5s ease-out;
@@ -266,19 +270,46 @@ p.tagline {
 }
 
 .sideimg {
-  width: 40%;
-  position: relative;
-  z-index: 1;
-  background: #ff000000;
-  pointer-events: none;
+    width: 66%;
+    height: 93%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: 1;
+    background: #ff000000;
+   
+    pointer-events: none;
 }
-.sideimg img {
+
+.parallex {
   width: 100%;
+  height: 100%;
+  position: absolute;
   object-fit: cover;
+}
+img.one {
+  z-index: 1;
+  width: 20%;
+  height: 59%;
+  bottom: 5%;
+  right: 24%;
+  object-fit: cover;
+  
+}
+img.two {
+  z-index: 2;
+  width: 15%;
+  height: 69%;
+  bottom: 5%;
+  left: 24%;
+  object-fit: cover;
+  
 }
 /****************************************************What we do**********************************/
 .ourpolicy {
-  width: 1538px;
+  /*width: 1538px;*/
+  width: 100%;
   display: flex;
   height: 600px;
   padding-top: 100px;
@@ -288,6 +319,8 @@ p.tagline {
   justify-content: space-evenly;
   align-items: center;
 }
+
+
 .ourpolicy:before {
   content: '';
   position: absolute;
@@ -330,10 +363,12 @@ p.tagline {
 .sec {
   padding: 43px;
   display: flex;
+  width: 40%;
   justify-content: center;
 }
 .sec img{
   width: 120%;
+  /*transform: translateY(400px);*/
 }
 
 /**************************************************Service box**********************************/
@@ -344,7 +379,8 @@ p.tagline {
   
 }
 .ourworks {
-  width: 1538px;
+  /*width: 1538px;*/
+  width: 100%;
   height: 100%;
   margin: auto;
   
@@ -366,7 +402,7 @@ p.tagline {
   width: 100%;
   flex-wrap: wrap;
   color: black;
-  height: 600px;
+  height: auto;
   justify-content: center;
 }
 .simple {
@@ -375,6 +411,7 @@ p.tagline {
   margin: 1px;
   overflow: hidden;
   height: 100%;
+  height: 474px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -469,10 +506,12 @@ a.source.btn {
 
 .container {
   padding-top: 75px;
-  width: 1538px;
+  /*width: 1538px;*/
+  width: 100%;
   margin: auto;
   height: 750px;
 }
+
 .contact{
   animation: none;
   padding-bottom: 30px;
@@ -580,13 +619,14 @@ font-weight: 700;
   padding: 10px;
   position: relative;
   bottom: 0;
-  
+  margin-top: auto;
   background-color: rgb(224, 224, 224);
   color: rgb(0, 0, 0);
   
 }
 .size{
-  width: 1538px;
+  /*width: 1538px;*/
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -594,6 +634,7 @@ font-weight: 700;
   align-items: center;
   height: 262px;
 }
+
 .name h3 {
   font-size: 38px;
 }
@@ -611,4 +652,159 @@ font-weight: 700;
 }
 .copyright p span {
   font-size: 23px;
+}
+
+
+
+
+/******************************************************Responsive design**********************/
+
+
+/**********************************************************Min-width***************************/
+/*********************************navbar**************************/
+@media (min-width:576px){
+  navbar{
+      max-width:540px;
+  }
+}
+@media (min-width: 768px) {
+  navbar {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  navbar {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  navbar {
+    max-width: 1532px;
+  }
+}
+/************************************Landingpage*************************/
+@media (min-width:576px){
+  .landing{
+      max-width:540px;
+  }
+}
+@media (min-width: 768px) {
+  .landing {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .landing {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .landing {
+    max-width: 1538px;
+  }
+}
+/**************************Our policy page************/
+@media (min-width:576px){
+  .ourpolicy{
+      max-width:540px;
+  }
+}
+@media (min-width: 768px) {
+  .ourpolicy {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .ourpolicy {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .ourpolicy {
+    max-width: 1538px;
+  }
+}
+/*******************************************Services*********************/
+@media (min-width:576px){
+  .ourworks{
+      max-width:540px;
+  }
+}
+@media (min-width: 768px) {
+  .ourworks {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .ourworks {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .ourworks {
+    max-width: 1538px;
+  }
+}
+/****************************************Contact us*****************************/
+@media (min-width:576px){
+  .container{
+      max-width:540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1538px;
+  }
+}
+/**********************************************Footer*******************/
+@media (min-width:576px){
+  .size{
+      max-width:540px;
+  }
+}
+@media (min-width: 768px) {
+  .size {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .size {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .size {
+    max-width: 1538px;
+  }
+}
+/*************************************************************************************************/
+
+
+/**********************************************Max -width********************************/
+@media (max-width: 1200px) {
+  html {
+    font-size: 85%;
+  }
 }
