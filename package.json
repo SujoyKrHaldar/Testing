@@ -1,5 +1,6 @@
 {
-  "name": "speechly",
+  "name": "expense_tracker",
+  "homepage": " https://sujoykrhaldar.github.io/Testing/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
