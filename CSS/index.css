@@ -440,10 +440,9 @@ p.tagline {
   html {
     font-size: 67%;
   }
-
   .landing-page {
     justify-content: flex-end;
-    padding-bottom: 5.5rem;
+    padding-bottom: 6.5rem;
   }
   p.tagline {
     padding-top: 0;
@@ -455,6 +454,11 @@ p.tagline {
     top: 22%;
     height: 45%;
   }
+  /*.background-img {
+    width: 100%;
+    right: 50%;
+    height: 38%;
+  }*/
   .btn {
     padding-bottom: 2rem;
   }
@@ -469,14 +473,25 @@ p.tagline {
 }
 
 @media (max-width: 376px) {
-  .landing-page h1 {
-    padding-bottom: 2.5rem;
+  html {
+    font-size: 60%;
+  }
+  /*.landing-page {
+    justify-content: flex-end;
+    padding-bottom: 6.5rem;
+  }
+  p.tagline {
+    padding-top: 0;
+    padding-bottom: 1rem;
   }
   .background-img {
     width: 100%;
     right: 50%;
-    top: 19%;
-    height: 39%;
+    top: 22%;
+    height: 45%;
+  }*/
+  .landing-page h1 {
+    padding-bottom: 2.5rem;
   }
   img.stroke {
     top: -10px;
