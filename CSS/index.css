@@ -8,6 +8,7 @@
   z-index: 2;
   background: #fff9f5;
 }
+
 .Service-page {
   z-index: 1;
 }
@@ -106,6 +107,7 @@ p.tagline {
   top: 0;
   z-index: 2;
   left: 0;
+
   pointer-events: none;
   animation: 6s slide-left cubic-bezier(0.99, 0.01, 0.33, 0.99);
 }
@@ -387,7 +389,8 @@ p.tagline {
 }
 
 @media (max-width: 600px) {
-  .landing-page {
+  .landing-page,
+  .Services {
     height: 100vh;
   }
   .content {
@@ -437,10 +440,20 @@ p.tagline {
   html {
     font-size: 67%;
   }
+
+  .landing-page {
+    justify-content: flex-end;
+    padding-bottom: 5.5rem;
+  }
+  p.tagline {
+    padding-top: 0;
+    padding-bottom: 1rem;
+  }
   .background-img {
     width: 100%;
     right: 50%;
-    height: 38%;
+    top: 22%;
+    height: 45%;
   }
   .btn {
     padding-bottom: 2rem;
@@ -456,8 +469,14 @@ p.tagline {
 }
 
 @media (max-width: 376px) {
-  html {
-    font-size: 60%;
+  .landing-page h1 {
+    padding-bottom: 2.5rem;
+  }
+  .background-img {
+    width: 100%;
+    right: 50%;
+    top: 19%;
+    height: 39%;
   }
   img.stroke {
     top: -10px;
