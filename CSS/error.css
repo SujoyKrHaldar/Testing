@@ -1,0 +1,222 @@
+/**************************landing page********/
+.header {
+  animation: none;
+}
+
+.front-page {
+  width: 100%;
+  position: relative;
+  margin: auto;
+  z-index: 2;
+  background: #fff9f5;
+}
+
+.landing-page {
+  height: 100vh;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.heading {
+  width: 100%;
+  padding: 8%;
+  display: flex;
+  position: relative;
+}
+.heading:before {
+  content: "";
+  position: absolute;
+  width: 74%;
+  height: 78%;
+  left: 0;
+  z-index: -1;
+  transform: translateY(-50%);
+  top: 50%;
+  background: white;
+}
+.text {
+  width: 50%;
+  justify-content: center;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+.heading h3 {
+  font-size: 4.5rem;
+  display: inline-block;
+  font-weight: 300;
+  color: #ffcc7f9e;
+  padding-bottom: 2rem;
+}
+.heading h1 {
+  font-size: 3.5rem;
+  padding-bottom: 1rem;
+}
+.heading h2 {
+  font-size: 3.5rem;
+  padding-bottom: 3rem;
+}
+.heading p {
+  font-size: 1.9rem;
+  font-weight: 300;
+}
+.img {
+  width: 50%;
+  overflow: hidden;
+  border-radius: 58% 42% 84% 16% / 17% 62% 38% 83%;
+  box-shadow: 4px 9px 10px #e4e4e4;
+  backdrop-filter: blur(20px);
+}
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*************************copyright*********/
+
+.copyright {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  padding: 1rem 8%;
+  align-items: center;
+  justify-content: space-between;
+}
+.social {
+  padding-right: 1rem;
+  position: relative;
+}
+
+.social a {
+  color: black;
+  font-size: 1.2rem;
+  margin-left: 0.3rem;
+  text-decoration: none;
+  padding: 1rem 0.7rem;
+  transition: 0.5s ease;
+}
+.social a:hover {
+  color: #ff9c1b;
+  transition: 0.5s ease;
+}
+/*******************************************all medias***************/
+
+@media (max-width: 980px) {
+  .heading h1 {
+    font-size: 3rem;
+    padding-bottom: 0.5rem;
+  }
+  .heading h2 {
+    font-size: 3rem;
+    padding-bottom: 3rem;
+  }
+  .heading p {
+    font-size: 1.3rem;
+    font-weight: 300;
+  }
+}
+
+@media (max-width: 917px) {
+  html {
+    font-size: 90%;
+  }
+  .heading h1 {
+    font-size: 3rem;
+    padding-bottom: 0.5rem;
+  }
+  .heading h2 {
+    font-size: 3rem;
+    padding-bottom: 3rem;
+  }
+  .heading p {
+    font-size: 1.3rem;
+    font-weight: 300;
+  }
+}
+@media (max-width: 850px) {
+  .heading {
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .text {
+    width: 100%;
+  }
+  .img {
+    width: 100%;
+    height: 50%;
+  }
+}
+@media (max-width: 720px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .copyright {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .social {
+    margin-bottom: 2rem;
+  }
+  .social a {
+    font-size: 2rem;
+  }
+  .social:before {
+    left: 100%;
+  }
+  .social:before {
+    content: none;
+  }
+}
+
+@media (max-width: 520px) {
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 67%;
+  }
+  .navigation {
+    padding: 1rem;
+  }
+  img.stroke {
+    top: -15px;
+    width: 100%;
+    height: 60px;
+  }
+}
+
+@media (max-width: 376px) {
+  html {
+    font-size: 60%;
+  }
+  img.stroke {
+    top: -10px;
+    width: 100%;
+    height: 52px;
+  }
+}
+
+@media (max-width: 321px) {
+  html {
+    font-size: 54%;
+  }
+  img.stroke {
+    height: 46px;
+  }
+}
+
+@media (max-width: 281px) {
+  .navigation {
+    width: 60%;
+  }
+}
