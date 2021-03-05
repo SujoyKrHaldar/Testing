@@ -276,7 +276,9 @@ ul li a:focus::before {
   background: #111111f0;
   border: 5px solid rgb(255, 255, 255);
   pointer-events: none;
-  transition: 0.3s ease-out;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  transition: 0.3s cubic-bezier(0.82, 0.01, 0.1, 0.99);
   display: none;
 }
 
@@ -295,7 +297,7 @@ ul li a:focus::before {
 }
 .navigation.Diam {
   pointer-events: visible;
-  transition: 0.3s ease-out;
+  transition: 0.3s cubic-bezier(1, 0, 0, 0.99);
   clip-path: circle(129.1% at 91% 9%);
 }
 @media (max-width: 940px) {
